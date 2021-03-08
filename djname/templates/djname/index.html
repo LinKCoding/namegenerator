@@ -1,0 +1,17 @@
+{% extends "./base.html" %}
+
+{% block content %} 
+  <h2>So far, here are all our Dj Names:</h2>
+  <section>
+    {% if all_names_list %}
+      <ul>
+        {% for name in all_names_list %}
+          <li>{{ name }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <h3>Come back in a second, we're prepping!</h3>
+    {% endif %}
+    
+  </section>
+{% endblock %}
